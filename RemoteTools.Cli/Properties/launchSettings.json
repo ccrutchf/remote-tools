@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "RemoteTools.Cli": {
+      "commandName": "Project",
+      "commandLineArgs": "--backend wsl2 --url https://github.com/UCSD-E4E/baboon-tracking.git --ansible-url https://raw.githubusercontent.com/UCSD-E4E/baboon-tracking/feature/wsl/playbook.yml"
+    }
+  }
+}

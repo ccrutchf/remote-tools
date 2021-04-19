@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Chris\.nuget\packages\quantconnect.pythonnet\2.0.1\contentFiles\any\any\clr.py" />
+    <None Remove="C:\Users\Chris\.nuget\packages\quantconnect.pythonnet\2.0.1\contentFiles\any\any\nPython.exe" />
+    <None Remove="C:\Users\Chris\.nuget\packages\quantconnect.pythonnet\2.0.1\contentFiles\any\any\pythonnet\find_libpython\__init__.py" />
+    <None Remove="C:\Users\Chris\.nuget\packages\quantconnect.pythonnet\2.0.1\contentFiles\any\any\pythonnet\find_libpython\__main__.py" />
+    <None Remove="C:\Users\Chris\.nuget\packages\quantconnect.pythonnet\2.0.1\contentFiles\any\any\pythonnet\find_libpython\__pycache__\__init__.cpython-36.pyc" />
+    <None Remove="C:\Users\Chris\.nuget\packages\quantconnect.pythonnet\2.0.1\contentFiles\any\any\pythonnet\runtime\Python.Runtime.deps.json" />
+    <None Remove="C:\Users\Chris\.nuget\packages\quantconnect.pythonnet\2.0.1\contentFiles\any\any\pythonnet\runtime\Python.Runtime.dll" />
+    <None Remove="C:\Users\Chris\.nuget\packages\quantconnect.pythonnet\2.0.1\contentFiles\any\any\pythonnet\runtime\Python.Runtime.pdb" />
+    <None Remove="C:\Users\Chris\.nuget\packages\quantconnect.pythonnet\2.0.1\contentFiles\any\any\pythonnet\util\__init__.py" />
+    <None Remove="C:\Users\Chris\.nuget\packages\quantconnect.pythonnet\2.0.1\contentFiles\any\any\pythonnet\util\__pycache__\__init__.cpython-36.pyc" />
+    <None Remove="C:\Users\Chris\.nuget\packages\quantconnect.pythonnet\2.0.1\contentFiles\any\any\pythonnet\__init__.py" />
+    <None Remove="C:\Users\Chris\.nuget\packages\quantconnect.pythonnet\2.0.1\contentFiles\any\any\pythonnet\__pycache__\__init__.cpython-36.pyc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="3.1.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RemoteTools.Cli.Core\RemoteTools.Cli.Core.csproj" />
+    <ProjectReference Include="..\RemoteTools.Cli.Plugins.Native\RemoteTools.Cli.Plugins.Native.csproj" />
+    <ProjectReference Include="..\RemoteTools.Cli.Plugins.PyPlot\RemoteTools.Cli.Plugins.PyPlot.csproj" />
+    <ProjectReference Include="..\RemoteTools.Cli.Plugins.RemoteServer\RemoteTools.Cli.Plugins.RemoteServer.csproj" />
+    <ProjectReference Include="..\RemoteTools.Cli.Plugins.Vagrant\RemoteTools.Cli.Plugins.Vagrant.csproj" />
+    <ProjectReference Include="..\RemoteTools.Cli.Plugins.Windows\RemoteTools.Cli.Plugins.Windows.csproj" />
+    <ProjectReference Include="..\RemoteTools.Cli.Plugins.Wsl2\RemoteTools.Cli.Plugins.Wsl2.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="7z.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="7z64.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
