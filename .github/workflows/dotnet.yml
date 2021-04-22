@@ -37,5 +37,5 @@ jobs:
     - name: Archive production artifacts
       uses: actions/upload-artifact@v2
       with:
-        name: dist/win-x86
+        name: dist/win-x86/**/*
         path: win-x86.zip
