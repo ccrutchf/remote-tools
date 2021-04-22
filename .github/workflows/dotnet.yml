@@ -84,3 +84,8 @@ jobs:
     steps:
     - name: Download all workflow run artifacts
       uses: actions/download-artifact@v2
+    - name: Package win-x86 for release
+      uses: papeloto/action-zip@v1
+      with:
+        files: win-x86
+        dest: win-x86.zip
