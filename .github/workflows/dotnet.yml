@@ -40,3 +40,8 @@ jobs:
         files: dist/win-x86
         recursive: true
         dest: win-x86.zip
+    - name: Archive production artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: dist
+        path: win-x86.zip
