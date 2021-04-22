@@ -23,3 +23,11 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-restore --verbosity normal
+    - name: Publish Windows
+      run: dotnet publish -p:PublishTrimmed=true --self-contained --runtime win-x86 -c Release -o dist/win-x86
+    - name: Package Windows
+      uses: papeloto/action-zip@v1
+      with:
+        files: dist/win-x86
+        recursive: true
+        dest: win-x86.zip
