@@ -8,7 +8,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -23,6 +22,11 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-restore --verbosity normal
+      
+  publish-windows:
+    runs-on: windows-latest
+    
+    steps:
     - name: Publish Windows
       run: dotnet publish -p:PublishTrimmed=true --self-contained --runtime win-x86 -c Release -o dist/win-x86
     - name: Package Windows
