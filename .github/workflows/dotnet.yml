@@ -23,3 +23,5 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
+    - name: Publish Windows
+      run: dotnet publish --no-build -p:PublishReadyToRun=true -p:PublishTrimmed=true -p:PublishSingleFile=true --self-contained --runtime x86
