@@ -27,8 +27,17 @@ jobs:
     runs-on: windows-latest
     
     steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --no-restore
     - name: Publish Windows
-      run: dotnet publish -p:PublishTrimmed=true --self-contained --runtime win-x86 -c Release -o dist/win-x86
+      run: dotnet publish --no-build -p:PublishTrimmed=true --self-contained --runtime win-x86 -c Release -o dist/win-x86
     - name: Package Windows
       uses: papeloto/action-zip@v1
       with:
