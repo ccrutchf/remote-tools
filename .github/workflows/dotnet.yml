@@ -73,3 +73,10 @@ jobs:
       with:
         name: macos-x64
         path: dist/macos-x64
+        
+  create-release:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Download all workflow run artifacts
+      uses: actions/download-artifact@v2
