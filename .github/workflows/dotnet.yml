@@ -34,14 +34,8 @@ jobs:
         dotnet-version: 5.0.x
     - name: Publish
       run: dotnet publish -p:PublishTrimmed=true --self-contained --runtime win-x86 -c Release -o dist/win-x86
-    - name: Package
-      uses: papeloto/action-zip@v1
-      with:
-        files: dist/win-x86
-        recursive: true
-        dest: win-x86.zip
     - name: Archive production artifacts
       uses: actions/upload-artifact@v2
       with:
-        name: win-x86
+        name: dist/win-x86
         path: win-x86.zip
