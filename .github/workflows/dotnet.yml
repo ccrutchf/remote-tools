@@ -79,10 +79,7 @@ jobs:
         
   create-release:
     runs-on: ubuntu-latest
-    needs: |
-      publish-windows
-      publish-mac
-      publish-linux
+    needs: [publish-windows, publish-macos, publish-linux]
     
     steps:
     - name: Download all workflow run artifacts
